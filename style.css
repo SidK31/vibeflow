@@ -1,24 +1,31 @@
-/* for page */
+/* Base styles */
 body {
-    background-color: #0f172a;
-    color: white;
-    font-family: Arial, sans-serif;
+    background-color: #111827;
+    color: #e5e7eb;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     text-align: center;
-    padding-top: 100px;
-    transition: background-color 0.5s ease;
+    padding-top: 50px;
+    transition: background-color 0.4s ease;
 }
 
-/* for buttons */
+/* Buttons */
 button {
-    padding: 12px 25px;
-    background-color: #38bdf8;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #e5e7eb;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-/* for input fields */
+button:hover {
+    background-color: #4b5563;
+    border-color: #6b7280;
+}
+
+/* Input fields */
 input {
     padding: 10px;
     border-radius: 6px;
@@ -27,144 +34,133 @@ input {
 }
 
 input[type="text"] {
-    padding: 12px 20px;
-    border: 2px solid #334155;
-    border-radius: 12px;
-    background-color: #1e293b;
-    color: #f1f5f9;
-    font-size: 16px;
+    padding: 10px 16px;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    background-color: #1f2937;
+    color: #e5e7eb;
+    font-size: 14px;
     outline: none;
-    transition: all 0.3s ease;
-    margin-right: 10px;
+    transition: border-color 0.2s ease;
+    margin-right: 8px;
     margin-bottom: 10px;
-    min-width: 200px;
+    min-width: 180px;
 }
 
 input[type="text"]:focus {
-    border-color: #38bdf8;
-    background-color: #0f172a;
-    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+    border-color: #6b7280;
 }
 
 input[type="text"]::placeholder {
-    color: #64748b;
+    color: #6b7280;
 }
 
-/* Mood App Section */
+/* Mood Section */
 .mood-section {
-    margin-top: 50px;
-    padding: 30px 20px;
-    background-color: rgba(30, 41, 59, 0.5);
-    border-radius: 16px;
-    max-width: 600px;
+    margin-top: 20px;
+    padding: 20px 20px;
+    background-color: rgba(31, 41, 55, 0.4);
+    border-radius: 8px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .mood-section h2 {
-    margin-bottom: 25px;
-    font-size: 24px;
-    color: #f1f5f9;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #d1d5db;
 }
 
 .mood-buttons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .mood-buttons button {
-    padding: 14px 28px;
-    background-color: #334155;
-    border: 2px solid #475569;
-    border-radius: 12px;
-    font-size: 16px;
-    color: #f1f5f9;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    min-width: 120px;
+    padding: 10px 20px;
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #d1d5db;
+    min-width: 80px;
 }
 
 .mood-buttons button:hover {
-    background-color: #475569;
-    border-color: #38bdf8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+    background-color: #374151;
+    border-color: #4b5563;
 }
 
-.mood-buttons button:active {
-    transform: translateY(0);
-}
-
-/* Active Mood Button State */
+/* Active Mood State */
 .active-mood {
-    transform: scale(1.05) !important;
-    background-color: #0ea5e9 !important;
-    border: 2px solid #38bdf8 !important;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6),
-        0 0 40px rgba(56, 189, 248, 0.3) !important;
+    background-color: #374151 !important;
+    border-color: #9ca3af !important;
+    box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.2) !important;
 }
-
-/* Layout Improvements */
 
 /* Hero Section */
 .hero-section {
-    max-width: 800px;
-    margin: 0 auto 60px;
-    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 20px 20px;
 }
 
 .hero-title {
-    font-size: 48px;
-    margin-bottom: 15px;
-    color: #f1f5f9;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #f3f4f6;
 }
 
 .hero-tagline {
-    font-size: 20px;
-    color: #94a3b8;
-    margin-bottom: 10px;
+    font-size: 16px;
+    color: #9ca3af;
+    margin-bottom: 6px;
 }
 
 .hero-cta {
-    font-size: 16px;
-    color: #64748b;
+    font-size: 14px;
+    color: #6b7280;
 }
 
-/* User Greeting Section */
+/* User Section */
 .user-section {
-    max-width: 700px;
-    margin: 0 auto 60px;
-    padding: 30px 20px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    padding: 16px 20px;
 }
 
 .section-heading {
-    font-size: 28px;
-    color: #f1f5f9;
-    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #d1d5db;
+    margin-bottom: 16px;
 }
 
 .greeting-section {
-    margin: 25px 0;
+    margin: 12px 0;
 }
 
 .button-group {
-    margin-top: 25px;
+    margin-top: 12px;
     display: flex;
-    gap: 12px;
+    gap: 8px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-/* Content Width & Spacing */
+/* Spacing */
 section {
-    padding: 20px;
+    padding: 16px;
 }
 
 h1,
 h2,
 p {
     margin: 0;
-    padding: 10px 0;
+    padding: 8px 0;
 }

@@ -11,41 +11,41 @@ const greetBtn = document.querySelector("#greetBtn");
 
 blueBtn.addEventListener("click", function () {
     document.body.style.backgroundColor = "#1e3a8a";
-    title.innerText = "Blue Vibe Activated 💙";
-    statusText.innerText = "Feeling calm and focused.";
+    title.innerText = "Blue Mode";
+    statusText.innerText = "Calm, focused vibes.";
 });
 
 greenBtn.addEventListener("click", function () {
     document.body.style.backgroundColor = "#14532d";
-    title.innerText = "Green Vibe Activated 💚";
-    statusText.innerText = "Fresh and positive energy!";
+    title.innerText = "Green Mode";
+    statusText.innerText = "Fresh and clean.";
 });
 
 darkBtn.addEventListener("click", function () {
     document.body.style.backgroundColor = "#000000";
-    title.innerText = "Dark Mode ON 😎";
-    statusText.innerText = "Welcome to the dark side 🌙";
+    title.innerText = "Dark Mode";
+    statusText.innerText = "Easy on the eyes.";
 });
 
 resetBtn.addEventListener("click", function () {
     document.body.style.backgroundColor = "#0f172a";
-    title.innerText = "Hello, I’m learning Web Dev 🚀";
-    statusText.innerText = "Click a button and see magic ✨";
+    title.innerText = "Welcome to VibeFlow";
+    statusText.innerText = "Click something to get started.";
 });
 
 greetBtn.addEventListener("click", function () {
     const userName = nameInput.value.trim();
 
     if (userName === "") {
-        statusText.innerText = "⚠️ Please enter your name first!";
+        statusText.innerText = "Enter a name first.";
     } else {
-        title.innerText = `Hello ${userName} 👋`;
-        statusText.innerText = `Welcome, ${userName}! Nice to meet you! 🎉`;
+        title.innerText = `Hey, ${userName}`;
+        statusText.innerText = `Good to see you.`;
         nameInput.value = "";
     }
 });
 
-// Mood App Logic
+// Mood switcher logic
 const happyBtn = document.querySelector("#happyBtn");
 const focusBtn = document.querySelector("#focusBtn");
 const chillBtn = document.querySelector("#chillBtn");
@@ -63,35 +63,30 @@ function setActiveMood(activeButton) {
     activeButton.classList.add("active-mood");
 }
 
-// Happy Mood - Bright & Positive
 happyBtn.addEventListener("click", function () {
     setActiveMood(happyBtn);
     document.body.style.backgroundColor = "#fbbf24";
-    title.innerText = "Happy Vibes Only! 😊✨";
-    statusText.innerText = "Feeling bright, cheerful, and full of energy! 🌟";
+    title.innerText = "Happy Mode";
+    statusText.innerText = "Bright and cheerful.";
 });
 
-// Focus Mood - Calm & Professional
 focusBtn.addEventListener("click", function () {
     setActiveMood(focusBtn);
     document.body.style.backgroundColor = "#1e40af";
-    title.innerText = "Focus Mode Activated 🧠";
-    statusText.innerText = "Time to get things done. Stay calm and focused! 💼";
+    title.innerText = "Focus Mode";
+    statusText.innerText = "Time to lock in.";
 });
 
-// Chill Mood - Soft & Relaxed
 chillBtn.addEventListener("click", function () {
     setActiveMood(chillBtn);
     document.body.style.backgroundColor = "#059669";
-    title.innerText = "Chill Mode On 🌿";
-    statusText.innerText = "Take it easy, relax, and enjoy the moment. 🍃";
+    title.innerText = "Chill Mode";
+    statusText.innerText = "Relax and unwind.";
 });
 
-// Dark Mood - Full Dark Mode
 darkMoodBtn.addEventListener("click", function () {
     setActiveMood(darkMoodBtn);
     document.body.style.backgroundColor = "#0a0a0a";
-    title.innerText = "Dark Mode Engaged 🌙";
-    statusText.innerText = "Embrace the darkness. Sleek, minimal, powerful. 🖤";
+    title.innerText = "Dark Mode";
+    statusText.innerText = "Sleek and minimal.";
 });
-
