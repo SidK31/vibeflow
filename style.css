@@ -1,10 +1,23 @@
 /* Base styles */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #111827;
     color: #e5e7eb;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 40px;
+    margin: 0;
+    min-height: 100vh;
     transition: background-color 0.4s ease;
 }
 
@@ -163,4 +176,110 @@ h2,
 p {
     margin: 0;
     padding: 8px 0;
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 900px) and (min-width: 601px) {
+    body {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .hero-section,
+    .user-section,
+    .mood-section {
+        max-width: 90%;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-tagline {
+        font-size: 14px;
+    }
+
+    .hero-cta {
+        font-size: 13px;
+    }
+
+    .section-heading {
+        font-size: 18px;
+    }
+
+    #title {
+        font-size: 22px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    #status {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .greeting-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .greeting-section input[type="text"] {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .greeting-section button {
+        width: 100%;
+        max-width: none;
+        padding: 14px 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .button-group button {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    .mood-section {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 16px;
+    }
+
+    .mood-section h2 {
+        font-size: 16px;
+    }
+
+    .mood-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .mood-buttons button {
+        width: 100%;
+        padding: 14px 20px;
+    }
 }
